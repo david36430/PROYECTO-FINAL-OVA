@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Misión 1 – Primer Contacto | Cyber Cuy</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Misión 1</a>
+    <a href="modulo2.html" id="btnM2" class="btn-disabled">Misión 2</a>
+    <a href="#" id="btnM3" class="btn-disabled">Misión 3</a>
+</nav>
+
+<div class="container">
+
+    <h1>🛰 Misión 1 – Primer Contacto</h1>
+
+    <!-- Historia -->
+    <div class="card">
+        <h2>📜 Historia</h2>
+        <p>
+            Cyber Cuy estaba patrullando el mundo digital cuando notó algo muy preocupante:
+            muchos niños y niñas estaban cayendo en trampas y dejando su información sin protección.
+        </p>
+        <p>
+            Te enseñó que ser seguro en Internet significa:
+        </p>
+        <ul>
+            <li>Crear contraseñas fuertes</li>
+            <li>Usar doble verificación</li>
+            <li>No compartir información personal</li>
+            <li>Ser respetuoso en línea</li>
+        </ul>
+        <img src="img/cyber-cuy_2.png" alt="Cyber-Cuy">
+    </div>
+
+    <!-- Actividad 1 -->
+    <div class="card">
+        <h2>🧠 Actividad 1 – ¿Buena o Mala Contraseña?</h2>
+        <p>Elige la contraseña más segura:</p>
+        <div class="quiz">
+            <button onclick="actividad1('a')">123456</button>
+            <button onclick="actividad1('b')">pepito2022</button>
+            <button onclick="actividad1('c')">Tigre#82!</button>
+        </div>
+        <p id="resp1" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 2 -->
+    <div class="card" id="act2" style="display:none;">
+        <h2>🧐 Actividad 2 – ¿Es seguro compartir esto?</h2>
+        <p>¿Se debe compartir esta información en Internet?</p>
+        <p><b>📝 "Mi dirección es Calle 44 # 2–51, vengan a visitarme."</b></p>
+        <button onclick="actividad2('si')">Sí, no pasa nada</button>
+        <button onclick="actividad2('no')">No, es peligroso</button>
+        <p id="resp2" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Mensaje Final -->
+    <div class="card" id="mensaje-final" style="display:none;">
+        <div class="unlock-message">
+            <h2 style="margin-top:0;">🎉 ¡Misión 1 Completada!</h2>
+            <p>¡Excelente trabajo! Ahora sabes cómo:</p>
+            <ul style="text-align:left; display:inline-block;">
+                <li>✅ Crear contraseñas seguras y fuertes</li>
+                <li>✅ Proteger tu información personal</li>
+                <li>✅ Reconocer qué datos NO compartir</li>
+            </ul>
+            <p style="margin:15px 0;">
+                <b>Cyber Cuy está orgulloso de tu progreso. 
+                ¡Pero los peligros del ciberespacio apenas comienzan!</b>
+            </p>
+            <img src="img/cyber-cuy_volando.png" alt="Cyber-Cuy victorioso" style="width:200px; margin:20px auto;">
+            <p style="font-weight:bold; color:#2e7d32; font-size:1.1rem;">
+                🔓 ¡Misión 2 desbloqueada!
+            </p>
+            <br>
+            <a href="modulo2.html" class="boton" style="margin-top:10px; font-size:1.1rem;">
+                ➡️ Continuar a Misión 2
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Variables simples (sin localStorage)
+let mision1Completada = false;
+
+// ACTIVIDAD 1
+function actividad1(r) {
+    let resp = document.getElementById("resp1");
+
+    if (r === 'c') {
+        resp.innerHTML = "🔒 ¡Correcto! 'Tigre#82!' es segura (mayúsculas, minúsculas, números y símbolos).";
+        resp.className = "correcto";
+        document.getElementById("act2").style.display = "block";
+    } 
+    else if (r === 'a') {
+        resp.innerHTML = "❌ '123456' es muy insegura.";
+        resp.className = "incorrecto";
+    }
+    else if (r === 'b') {
+        resp.innerHTML = "❌ 'pepito2022' es fácil de adivinar.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 2
+function actividad2(r) {
+    let resp = document.getElementById("resp2");
+    let btnM2 = document.getElementById("btnM2");
+
+    if (r === 'no') {
+        resp.innerHTML = "¡Correcto! Compartir tu dirección es peligroso. 👍";
+        resp.className = "correcto";
+        
+        // Habilitar Misión 2
+        mision1Completada = true;
+        btnM2.classList.remove('btn-disabled');
+        btnM2.style.pointerEvents = "auto";
+        btnM2.style.opacity = "1";
+        
+        // Mostrar mensaje final
+        document.getElementById("mensaje-final").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ Eso es riesgoso. Nunca compartas tu dirección.";
+        resp.className = "incorrecto";
+    }
+}
+</script>
+
+</body>
+</html>

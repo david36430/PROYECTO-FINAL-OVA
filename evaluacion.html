@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación Final | Cyber Cuy</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Misión 1</a>
+    <a href="modulo2.html">Misión 2</a>
+    <a href="modulo3.html">Misión 3</a>
+</nav>
+
+<div class="container">
+
+    <h1>📝 Evaluación Final - Guardián del Internet</h1>
+
+    <!-- Introducción -->
+    <div class="hero">
+        <div>
+            <h2>🦸‍♂️ ¡Es hora de demostrar lo que aprendiste!</h2>
+            <p>
+                Has completado las 3 misiones de Cyber Cuy. 
+                Ahora responde estas <b>10 preguntas</b> para obtener tu certificado 
+                oficial de <b>Guardián del Internet</b>.
+            </p>
+            <p><b>📊 Puntaje necesario para aprobar:</b> 7/10 correctas</p>
+        </div>
+        <img src="img/cyber-cuy_volando.png" alt="Cyber-Cuy">
+    </div>
+
+    <!-- Pregunta 1 -->
+    <div class="card">
+        <h3>1️⃣ ¿Cuál de estas contraseñas es más segura?</h3>
+        <button onclick="responder(1, 'a')">A) 12345678</button>
+        <button onclick="responder(1, 'b')">B) MiNombre2024</button>
+        <button onclick="responder(1, 'c')">C) P@ssw0rd!</button>
+        <button onclick="responder(1, 'd')">D) G4t0*Azul#2024!</button>
+        <p id="resp1" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="card">
+        <h3>2️⃣ Un correo dice: "Tu cuenta será bloqueada, haz clic aquí". El dominio es "banc0-seguridad.com". ¿Qué haces?</h3>
+        <button onclick="responder(2, 'a')">A) Hacer clic inmediatamente</button>
+        <button onclick="responder(2, 'b')">B) Ignorarlo, es phishing</button>
+        <button onclick="responder(2, 'c')">C) Responder el correo</button>
+        <button onclick="responder(2, 'd')">D) Compartirlo con amigos</button>
+        <p id="resp2" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="card">
+        <h3>3️⃣ ¿Qué información NUNCA debes compartir públicamente en Internet?</h3>
+        <button onclick="responder(3, 'a')">A) Tus hobbies</button>
+        <button onclick="responder(3, 'b')">B) Tu música favorita</button>
+        <button onclick="responder(3, 'c')">C) Tu dirección de casa</button>
+        <button onclick="responder(3, 'd')">D) Tu película favorita</button>
+        <p id="resp3" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="card">
+        <h3>4️⃣ Recibes un mensaje: "¡Ganaste un iPhone gratis! Haz clic aquí". ¿Qué debes pensar?</h3>
+        <button onclick="responder(4, 'a')">A) Es mi día de suerte</button>
+        <button onclick="responder(4, 'b')">B) Si parece muy bueno, es trampa</button>
+        <button onclick="responder(4, 'c')">C) Debo compartirlo con todos</button>
+        <button onclick="responder(4, 'd')">D) Es un regalo legítimo</button>
+        <p id="resp4" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="card">
+        <h3>5️⃣ ¿Qué es la verificación en dos pasos?</h3>
+        <button onclick="responder(5, 'a')">A) Escribir la contraseña dos veces</button>
+        <button onclick="responder(5, 'b')">B) Una capa extra de seguridad con código</button>
+        <button onclick="responder(5, 'c')">C) Usar dos contraseñas diferentes</button>
+        <button onclick="responder(5, 'd')">D) Ingresar dos veces al día</button>
+        <p id="resp5" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 6 -->
+    <div class="card">
+        <h3>6️⃣ Ves que están haciendo ciberacoso a un compañero. ¿Qué haces?</h3>
+        <button onclick="responder(6, 'a')">A) Ignorarlo, no es mi problema</button>
+        <button onclick="responder(6, 'b')">B) Participar con un comentario</button>
+        <button onclick="responder(6, 'c')">C) Defenderlo y reportar</button>
+        <button onclick="responder(6, 'd')">D) Solo observar sin hacer nada</button>
+        <p id="resp6" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 7 -->
+    <div class="card">
+        <h3>7️⃣ Recibes una noticia alarmante por WhatsApp. Antes de compartirla debes:</h3>
+        <button onclick="responder(7, 'a')">A) Reenviarla inmediatamente</button>
+        <button onclick="responder(7, 'b')">B) Verificarla con fuentes confiables</button>
+        <button onclick="responder(7, 'c')">C) Agregarle más dramatismo</button>
+        <button onclick="responder(7, 'd')">D) Compartirla en todos tus grupos</button>
+        <p id="resp7" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 8 -->
+    <div class="card">
+        <h3>8️⃣ ¿Cuál es la red WiFi más segura para conectarte?</h3>
+        <button onclick="responder(8, 'a')">A) WiFi_Gratis (sin contraseña)</button>
+        <button onclick="responder(8, 'b')">B) Red pública del centro comercial</button>
+        <button onclick="responder(8, 'c')">C) Tu red de casa con contraseña</button>
+        <button onclick="responder(8, 'd')">D) Cualquiera que tenga señal fuerte</button>
+        <p id="resp8" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 9 -->
+    <div class="card">
+        <h3>9️⃣ Un extraño en un juego online te pide fotos y que no le cuentes a nadie. Debes:</h3>
+        <button onclick="responder(9, 'a')">A) Enviarle las fotos</button>
+        <button onclick="responder(9, 'b')">B) Contarle a un adulto de confianza</button>
+        <button onclick="responder(9, 'c')">C) Guardar el secreto</button>
+        <button onclick="responder(9, 'd')">D) Solo bloquearlo</button>
+        <p id="resp9" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Pregunta 10 -->
+    <div class="card">
+        <h3>🔟 ¿Qué debes revisar antes de publicar una foto en redes sociales?</h3>
+        <button onclick="responder(10, 'a')">A) Que se vea bonita</button>
+        <button onclick="responder(10, 'b')">B) Que no tenga información personal visible</button>
+        <button onclick="responder(10, 'c')">C) Que tenga muchos likes</button>
+        <button onclick="responder(10, 'd')">D) Que esté en alta resolución</button>
+        <p id="resp10" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Botón para Calificar -->
+    <div class="card" style="text-align:center;">
+        <button onclick="calificar()" style="font-size:1.2rem; padding:15px 30px;">
+            ✅ Calificar Evaluación
+        </button>
+        <p id="mensaje-calificacion" style="margin-top:15px; font-size:1.1rem;"></p>
+    </div>
+
+    <!-- Resultado Final (Oculto inicialmente) -->
+    <div class="card" id="resultado-final" style="display:none;">
+        <div class="unlock-message">
+            <h2 id="titulo-resultado"></h2>
+            <div id="contenido-resultado"></div>
+            <img id="imagen-resultado" src="" alt="Cyber-Cuy" style="width:200px; margin:20px auto;">
+            <div id="botones-resultado"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Respuestas correctas
+const respuestasCorrectas = {
+    1: 'd',  // G4t0*Azul#2024!
+    2: 'b',  // Ignorarlo, es phishing
+    3: 'c',  // Tu dirección de casa
+    4: 'b',  // Si parece muy bueno, es trampa
+    5: 'b',  // Una capa extra de seguridad
+    6: 'c',  // Defenderlo y reportar
+    7: 'b',  // Verificarla con fuentes
+    8: 'c',  // Tu red de casa
+    9: 'b',  // Contarle a un adulto
+    10: 'b'  // Que no tenga información personal
+};
+
+// Almacenar respuestas del usuario
+let respuestasUsuario = {};
+let preguntasRespondidas = 0;
+
+// Función para responder
+function responder(numPregunta, opcion) {
+    let elemRespuesta = document.getElementById('resp' + numPregunta);
+    
+    // Si ya respondió esta pregunta, no contar de nuevo
+    if (!respuestasUsuario[numPregunta]) {
+        preguntasRespondidas++;
+    }
+    
+    // Guardar respuesta
+    respuestasUsuario[numPregunta] = opcion;
+    
+    // Mostrar feedback inmediato
+    if (opcion === respuestasCorrectas[numPregunta]) {
+        elemRespuesta.innerHTML = "✅ Correcto";
+        elemRespuesta.className = "correcto";
+    } else {
+        elemRespuesta.innerHTML = "❌ Incorrecto";
+        elemRespuesta.className = "incorrecto";
+    }
+    
+    // Deshabilitar otros botones de esta pregunta
+    let card = elemRespuesta.parentElement;
+    let botones = card.getElementsByTagName('button');
+    for (let btn of botones) {
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.style.cursor = "not-allowed";
+    }
+}
+
+// Función para calificar
+function calificar() {
+    let msgCalif = document.getElementById('mensaje-calificacion');
+    
+    // Verificar que respondió todas
+    if (preguntasRespondidas < 10) {
+        msgCalif.innerHTML = "⚠️ Debes responder las 10 preguntas antes de calificar.";
+        msgCalif.style.color = "#f44336";
+        return;
+    }
+    
+    // Contar respuestas correctas
+    let correctas = 0;
+    for (let i = 1; i <= 10; i++) {
+        if (respuestasUsuario[i] === respuestasCorrectas[i]) {
+            correctas++;
+        }
+    }
+    
+    // Mostrar resultado
+    mostrarResultado(correctas);
+}
+
+// Función para mostrar resultado final
+function mostrarResultado(correctas) {
+    let resultadoDiv = document.getElementById('resultado-final');
+    let titulo = document.getElementById('titulo-resultado');
+    let contenido = document.getElementById('contenido-resultado');
+    let imagen = document.getElementById('imagen-resultado');
+    let botones = document.getElementById('botones-resultado');
+    
+    resultadoDiv.style.display = "block";
+    resultadoDiv.scrollIntoView({ behavior: 'smooth' });
+    
+    // Calcular porcentaje
+    let porcentaje = (correctas / 10) * 100;
+    
+    if (correctas >= 7) {
+        // APROBADO
+        titulo.innerHTML = "🏆 ¡FELICITACIONES! 🏆";
+        titulo.style.color = "#4caf50";
+        
+        contenido.innerHTML = `
+            <div style="background:#e8f5e9; padding:20px; border-radius:8px; margin:20px 0;">
+                <h3 style="color:#2e7d32; margin-top:0;">✅ EVALUACIÓN APROBADA</h3>
+                <p style="font-size:1.2rem; margin:15px 0;">
+                    <b>Puntaje: ${correctas}/10 (${porcentaje}%)</b>
+                </p>
+                <p style="margin:15px 0;">
+                    Has demostrado que comprendes los fundamentos de ciberseguridad 
+                    y ética digital. ¡Eres oficialmente un <b>Guardián del Internet</b>!
+                </p>
+                <div style="background:#4caf50; color:white; padding:15px; border-radius:8px; margin:20px 0;">
+                    <h2 style="margin:10px 0; font-size:1.5rem;">
+                        🛡️ CERTIFICADO DE GUARDIÁN DIGITAL 🛡️
+                    </h2>
+                    <p style="margin:10px 0;">
+                        Este certificado acredita que has completado exitosamente 
+                        el programa de formación en ciberseguridad y ética digital 
+                        de Cyber Cuy.
+                    </p>
+                </div>
+                <p><b>Lo que lograste:</b></p>
+                <ul style="text-align:left; display:inline-block;">
+                    <li>✅ Completaste las 3 misiones</li>
+                    <li>✅ Aprobaste la evaluación final</li>
+                    <li>✅ Aprendiste a protegerte en Internet</li>
+                    <li>✅ Sabes defender a otros</li>
+                </ul>
+            </div>
+        `;
+        
+        imagen.src = "img/cyber-cuy_volando.png";
+        
+        botones.innerHTML = `
+            <a href="index.html" class="boton" style="margin:10px;">🏠 Volver al Inicio</a>
+            <button onclick="reintentar()" class="boton" style="margin:10px; background:#2196f3;">
+                🔄 Reintentar Evaluación
+            </button>
+        `;
+        
+    } else {
+        // NO APROBADO
+        titulo.innerHTML = "📚 Sigue Practicando";
+        titulo.style.color = "#ff9800";
+        
+        contenido.innerHTML = `
+            <div style="background:#fff3e0; padding:20px; border-radius:8px; margin:20px 0;">
+                <h3 style="color:#e65100; margin-top:0;">📊 Puntaje: ${correctas}/10 (${porcentaje}%)</h3>
+                <p style="margin:15px 0;">
+                    Necesitas <b>7 respuestas correctas</b> para aprobar. 
+                    ¡No te desanimes! El aprendizaje es un proceso.
+                </p>
+                <p style="margin:15px 0;">
+                    <b>Recomendación:</b> Repasa las misiones antes de reintentar:
+                </p>
+                <ul style="text-align:left; display:inline-block;">
+                    <li>🛰 Misión 1: Contraseñas y seguridad básica</li>
+                    <li>🕵️ Misión 2: Detectar phishing y amenazas</li>
+                    <li>⚖️ Misión 3: Ética digital y decisiones</li>
+                </ul>
+                <p style="margin:15px 0; font-weight:bold;">
+                    ¡Cyber Cuy confía en que lo lograrás! 💪
+                </p>
+            </div>
+        `;
+        
+        imagen.src = "img/cyber-cuy_2.png";
+        
+        botones.innerHTML = `
+            <a href="modulo1.html" class="boton" style="margin:10px; background:#9eff8c;">
+                📖 Repasar Misiones
+            </a>
+            <button onclick="reintentar()" class="boton" style="margin:10px;">
+                🔄 Reintentar Evaluación
+            </button>
+        `;
+    }
+}
+
+// Función para reintentar
+function reintentar() {
+    // Resetear variables
+    respuestasUsuario = {};
+    preguntasRespondidas = 0;
+    
+    // Limpiar todas las respuestas
+    for (let i = 1; i <= 10; i++) {
+        let elemRespuesta = document.getElementById('resp' + i);
+        elemRespuesta.innerHTML = "";
+        elemRespuesta.className = "";
+        
+        // Habilitar botones nuevamente
+        let card = elemRespuesta.parentElement;
+        let botones = card.getElementsByTagName('button');
+        for (let btn of botones) {
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.style.cursor = "pointer";
+        }
+    }
+    
+    // Ocultar resultado y limpiar mensaje
+    document.getElementById('resultado-final').style.display = "none";
+    document.getElementById('mensaje-calificacion').innerHTML = "";
+    
+    // Scroll al inicio
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

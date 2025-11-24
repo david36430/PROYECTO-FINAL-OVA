@@ -1,0 +1,209 @@
+/* ===========================================================
+   PALETA DE COLORES INSPIRADA EN CYBER-CUY (TONOS PASTEL)
+   =========================================================== */
+:root {
+    --cuy-base: #c7865f;       /* Terracota pastel */
+    --cuy-crema: #f7f2df;      /* Crema */
+    --cuy-verde: #9eff8c;      /* Verde armadura pastel */
+    --cuy-azul: #9eefff;       /* Capa azul pastel */
+    --cuy-negro: #1a1a1a;      /* Negro */
+    --cuy-zafiro: #8ca7e6;     /* Azul pastel tipo zafiro */
+
+    --texto-principal: #1a1a1a;
+    --texto-suave: #444;
+    --fondo-claro: #ffffff;
+    --fondo-suave: #eef5ff;
+}
+
+/* ===========================================================
+   ESTILOS BASE
+   =========================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fredoka", "Poppins", sans-serif;
+    background: var(--fondo-suave);
+    color: var(--texto-principal);
+}
+
+/* ===========================================================
+   MENÚ DE NAVEGACIÓN
+   =========================================================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--cuy-azul);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    border-bottom: 4px solid var(--cuy-zafiro);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    background: var(--cuy-verde);
+    padding: 8px 16px;
+    color: var(--texto-principal);
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: var(--cuy-base);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-disabled {
+    background: #b5e2a8;
+    color: #777;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* ===========================================================
+   CONTENEDOR GENERAL
+   =========================================================== */
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 120px auto 50px auto; /* espacio para navbar fija */
+}
+
+/* ===========================================================
+   HERO / PRESENTACIÓN
+   =========================================================== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    background: var(--cuy-crema);
+    padding: 25px;
+    border-radius: 22px;
+    border: 3px solid var(--cuy-zafiro);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.hero img {
+    width: 250px;
+    max-width: 70%;
+    border-radius: 14px;
+}
+
+/* ===========================================================
+   TARJETAS DE SECCIÓN
+   =========================================================== */
+.card {
+    background: var(--fondo-claro);
+    border-left: 10px solid var(--cuy-zafiro);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================================================
+   BOTONES
+   =========================================================== */
+button,
+.btn,
+.boton {
+    background: var(--cuy-verde);
+    border: none;
+    padding: 12px 18px;
+    color: var(--cuy-negro);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.btn:hover,
+.boton:hover {
+    background: var(--cuy-base);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===========================================================
+   FEEDBACK VISUAL
+   =========================================================== */
+.correcto {
+    color: green;
+    font-weight: bold;
+}
+.incorrecto {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===========================================================
+   MENSAJE DE DESBLOQUEO
+   =========================================================== */
+.unlock-message {
+    background: var(--cuy-verde);
+    border: 2px solid var(--cuy-zafiro);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===========================================================
+   PROGRESO
+   =========================================================== */
+#progress-container {
+    width: 100%;
+    background: #b5e2a8;
+    border-radius: 12px;
+    height: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--cuy-verde), var(--cuy-zafiro));
+    transition: width 0.6s ease;
+}
+
+.hero img,
+.card img {
+    display: block;
+    margin: 0 auto;       /* Centra la imagen */
+    width: 150px;         /* Tamaño más pequeño */
+    border-radius: 12px;
+}
+.notebook-nav {
+    display: flex;
+    justify-content: center;   /* Centra los botones */
+    gap: 20px;                 /* Espacio entre ellos */
+    margin-top: 15px;
+}
+
+#page-indicator {
+    text-align: center;        /* Centra el texto */
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}

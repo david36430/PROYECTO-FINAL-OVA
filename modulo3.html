@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Misión 3 – Protegiendo el Mundo Digital | Cyber Cuy</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Misión 1</a>
+    <a href="modulo2.html">Misión 2</a>
+    <a href="modulo3.html">Misión 3</a>
+</nav>
+
+<div class="container">
+
+    <h1>⚖️ Misión 3 – Protegiendo el Mundo Digital</h1>
+
+    <!-- Historia -->
+    <div class="card">
+        <h2>📜 Historia</h2>
+        <p>
+            Como ya sabes detectar los engaños, los atacantes cambian su estrategia.
+            Ahora intentan hacerte caer con <b>emociones</b>:
+        </p>
+        <ul>
+            <li>😲 Curiosidad</li>
+            <li>😱 Miedo</li>
+            <li>📰 Noticias falsas</li>
+            <li>⚡ Mensajes para hacer que reacciones rápido sin pensar</li>
+        </ul>
+        <p>
+            <b>Cyber Cuy te explica que a veces el ataque más fuerte no es un virus…
+            sino una mala decisión.</b>
+        </p>
+        <p>Aquí aprendes a:</p>
+        <ul>
+            <li>Mantener la calma 🧘</li>
+            <li>Pensar antes de hacer clic 🤔</li>
+            <li>Ser responsable con lo que dices y compartes 💬</li>
+            <li>No enviar mensajes feos ni hacer ciberacoso 🚫</li>
+            <li>Cuidar tu identidad y la de los demás 👤</li>
+            <li>Ayudar a otros cuando veas que pueden estar en peligro 🛡️</li>
+        </ul>
+        <img src="img/cyber-cuy_2.png" alt="Cyber-Cuy pensativo">
+    </div>
+
+    <!-- Actividad 1: Curiosidad Peligrosa -->
+    <div class="card">
+        <h2>😲 Actividad 1 – La Trampa de la Curiosidad</h2>
+        <p>Recibes este mensaje de un número desconocido:</p>
+        
+        <div style="background:#e3f2fd; padding:15px; border-radius:8px; border:2px solid #2196f3; margin:15px 0;">
+            <p style="margin:0; font-size:0.9rem; color:#555;">📱 Número desconocido</p>
+            <p style="margin:10px 0; font-weight:bold; color:#d32f2f;">
+                😱 ¡NO VAS A CREER lo que están diciendo de ti en esta página! 
+                Mira aquí: <span style="color:blue; text-decoration:underline;">bit.ly/secreto123</span>
+            </p>
+            <p style="margin:10px 0; font-size:0.85rem;">
+                ¡Rápido antes de que lo borren! 🏃‍♂️💨
+            </p>
+        </div>
+
+        <p><b>¿Qué haces?</b></p>
+        <button onclick="actividad1('hacer-clic')">🔍 Hacer clic por curiosidad</button>
+        <button onclick="actividad1('ignorar')">🛑 Ignorarlo y mantener la calma</button>
+        
+        <p id="resp1" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 2: Ciberacoso -->
+    <div class="card" id="act2" style="display:none;">
+        <h2>🚫 Actividad 2 – Detener el Ciberacoso</h2>
+        <p>En el grupo de WhatsApp de tu clase, varios compañeros están enviando 
+        memes burlándose de otro compañero y compartiendo una foto suya sin permiso.</p>
+        
+        <div style="background:#fff3cd; padding:15px; border-radius:8px; border:2px solid #ffc107; margin:15px 0;">
+            <p style="margin:5px 0;">👤 <b>Compañero 1:</b> Jajaja miren esta foto de Juan 😂</p>
+            <p style="margin:5px 0;">👤 <b>Compañero 2:</b> Qué ridículo se ve 🤣🤣</p>
+            <p style="margin:5px 0;">👤 <b>Compañero 3:</b> Compartan esto con otros grupos jaja</p>
+        </div>
+
+        <p><b>¿Qué es lo correcto hacer?</b></p>
+        <button onclick="actividad2('ignorar')">😶 Ignorarlo, no es mi problema</button>
+        <button onclick="actividad2('participar')">😂 Enviar también un comentario gracioso</button>
+        <button onclick="actividad2('defender')">🛡️ Defender a Juan y reportar</button>
+        
+        <p id="resp2" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 3: Noticia Falsa con Miedo -->
+    <div class="card" id="act3" style="display:none;">
+        <h2>😱 Actividad 3 – Noticias que dan Miedo</h2>
+        <p>Tu familiar te reenvía este mensaje urgente:</p>
+        
+        <div style="background:#ffebee; padding:15px; border-radius:8px; border:2px solid #f44336; margin:15px 0;">
+            <p style="margin:10px 0; font-weight:bold; color:#c62828;">
+                🚨 ALERTA URGENTE 🚨<br>
+                ¡Están secuestrando niños en el centro comercial! 
+                Ya van 5 casos hoy. La policía no está haciendo nada.
+                <b>COMPARTE ESTO CON TODOS TUS CONTACTOS PARA SALVAR VIDAS!</b>
+            </p>
+            <p style="margin:10px 0; font-size:0.85rem;">
+                Reenviado 147 veces
+            </p>
+        </div>
+
+        <p><b>¿Qué debes hacer?</b></p>
+        <button onclick="actividad3('reenviar')">📤 Reenviarlo a todos mis contactos</button>
+        <button onclick="actividad3('verificar')">🔍 Verificar con fuentes confiables primero</button>
+        
+        <p id="resp3" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 4: Proteger Identidad -->
+    <div class="card" id="act4" style="display:none;">
+        <h2>👤 Actividad 4 – Cuidar la Identidad</h2>
+        <p>Vas a publicar una foto de tu fiesta de cumpleaños. 
+        En la foto se ven claramente:</p>
+        
+        <ul style="background:#f5f5f5; padding:15px; border-radius:8px;">
+            <li>El nombre de tu calle en un letrero de fondo</li>
+            <li>El número de tu casa en la puerta</li>
+            <li>Tu hermano menor (de 8 años) con su uniforme escolar</li>
+            <li>Las placas del carro de tu papá</li>
+        </ul>
+
+        <p><b>¿Qué haces antes de publicarla?</b></p>
+        <button onclick="actividad4('publicar')">📱 Publicarla así, está genial</button>
+        <button onclick="actividad4('editar')">✂️ Editarla para ocultar datos sensibles</button>
+        
+        <p id="resp4" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 5: Ayudar a Otros -->
+    <div class="card" id="act5" style="display:none;">
+        <h2>🛡️ Actividad 5 – Ser un Guardián</h2>
+        <p>Notas que tu amigo menor está muy nervioso y te cuenta que un extraño 
+        en un juego online le está pidiendo:</p>
+        
+        <div style="background:#e8f5e9; padding:15px; border-radius:8px; border:2px solid #4caf50; margin:15px 0;">
+            <ul style="margin:10px 0;">
+                <li>Que le envíe fotos</li>
+                <li>Que le dé su dirección</li>
+                <li>Que no le cuente a nadie sobre su "amistad"</li>
+                <li>Que se encuentren en persona</li>
+            </ul>
+        </div>
+
+        <p><b>¿Qué haces para proteger a tu amigo?</b></p>
+        <button onclick="actividad5('ignorar')">🤷 Decirle que ignore al extraño</button>
+        <button onclick="actividad5('ayudar')">🚨 Ayudarlo a contarle a un adulto de confianza</button>
+        
+        <p id="resp5" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Mensaje Final -->
+    <div class="card" id="mensaje-final" style="display:none;">
+        <div class="unlock-message">
+            <h2 style="margin-top:0;">🏆 ¡MISIÓN FINAL COMPLETADA!</h2>
+            <p><b>🎉 ¡Felicidades! Has completado todas las misiones de Cyber Cuy</b></p>
+            
+            <div style="background:white; padding:15px; border-radius:8px; margin:15px 0; text-align:left;">
+                <p><b>Lo que has aprendido:</b></p>
+                <ul>
+                    <li>✅ Crear contraseñas seguras y proteger tus cuentas</li>
+                    <li>✅ Detectar phishing, premios falsos y enlaces sospechosos</li>
+                    <li>✅ No dejarte llevar por emociones (miedo, curiosidad)</li>
+                    <li>✅ Detener el ciberacoso y defender a otros</li>
+                    <li>✅ Verificar noticias antes de compartirlas</li>
+                    <li>✅ Proteger tu identidad y la de los demás</li>
+                    <li>✅ Ayudar a quienes están en peligro</li>
+                </ul>
+            </div>
+
+            <p style="font-size:1.2rem; margin:20px 0;">
+                <b>Gracias a tu crecimiento, los hackers no pueden entrar 
+                y el mundo digital empieza a estabilizarse.</b>
+            </p>
+            
+            <img src="img/cyber-cuy_volando.png" alt="Cyber-Cuy victorioso" style="width:200px; margin:20px auto;">
+            
+            <div style="background:#4caf50; color:white; padding:15px; border-radius:8px; margin:20px 0;">
+                <h3 style="margin:10px 0;">🦸‍♂️ Ahora eres oficialmente un</h3>
+                <h2 style="margin:10px 0; font-size:2rem;">GUARDIÁN DEL INTERNET</h2>
+            </div>
+
+            <p style="margin:20px 0;">
+                <b>Recuerda:</b> El mundo digital nunca duerme, las amenazas siempre cambian, 
+                y ser un héroe también significa usar Internet para hacer el bien.
+            </p>
+
+            <a href="evaluacion.html" class="boton" style="margin-top:10px; font-size:1.1rem;">
+                📝 Ir a la Evaluación Final
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Variable para controlar progreso
+let mision3Completada = false;
+
+// ACTIVIDAD 1: Curiosidad Peligrosa
+function actividad1(respuesta) {
+    let resp = document.getElementById("resp1");
+    
+    if (respuesta === 'ignorar') {
+        resp.innerHTML = "🧠 ¡Perfecto! Mantuviste la calma.<br>" +
+            "Los atacantes usan la <b>curiosidad</b> para hacerte caer:<br>" +
+            "• 'No vas a creer esto...'<br>" +
+            "• 'Mira antes de que lo borren...'<br>" +
+            "• 'Están hablando de ti...'<br>" +
+            "¡Respira y piensa antes de hacer clic!";
+        resp.className = "correcto";
+        document.getElementById("act2").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Esa curiosidad puede ser peligrosa! Podría ser un virus o robo de datos.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 2: Ciberacoso
+function actividad2(respuesta) {
+    let resp = document.getElementById("resp2");
+    
+    if (respuesta === 'defender') {
+        resp.innerHTML = "🛡️ ¡Eres un verdadero guardián!<br>" +
+            "Defender a otros del ciberacoso es valiente:<br>" +
+            "• El ciberacoso puede causar daño grave<br>" +
+            "• Tu voz puede detener la cadena<br>" +
+            "• Reportar salva a la víctima<br>" +
+            "• Ignorar también hace daño";
+        resp.className = "correcto";
+        document.getElementById("act3").style.display = "block";
+    } else if (respuesta === 'ignorar') {
+        resp.innerHTML = "⚠️ Ignorarlo también hace daño. Un guardián defiende a quien sufre acoso.";
+        resp.className = "incorrecto";
+    } else {
+        resp.innerHTML = "❌ Participar es ser parte del problema. Nunca hagas ciberacoso.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 3: Noticia Falsa con Miedo
+function actividad3(respuesta) {
+    let resp = document.getElementById("resp3");
+    
+    if (respuesta === 'verificar') {
+        resp.innerHTML = "✅ ¡Decisión inteligente!<br>" +
+            "Las noticias falsas usan el <b>MIEDO</b> para propagarse:<br>" +
+            "• Crean urgencia falsa<br>" +
+            "• No tienen fuentes confiables<br>" +
+            "• Dicen 'comparte esto'<br>" +
+            "<b>Verifica siempre con:</b> medios oficiales, policía, noticias reales";
+        resp.className = "correcto";
+        document.getElementById("act4").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Espera! Reenviar sin verificar propaga pánico y mentiras.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 4: Proteger Identidad
+function actividad4(respuesta) {
+    let resp = document.getElementById("resp4");
+    
+    if (respuesta === 'editar') {
+        resp.innerHTML = "👏 ¡Excelente cuidado de tu identidad!<br>" +
+            "Esa foto tenía información peligrosa:<br>" +
+            "• Tu dirección exacta<br>" +
+            "• Datos de tu hermano menor<br>" +
+            "• Placas del carro<br>" +
+            "<b>Siempre revisa qué se ve en tus fotos antes de publicar.</b>";
+        resp.className = "correcto";
+        document.getElementById("act5").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Peligro! Esa foto revela demasiada información personal.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 5: Ayudar a Otros
+function actividad5(respuesta) {
+    let resp = document.getElementById("resp5");
+    
+    if (respuesta === 'ayudar') {
+        resp.innerHTML = "🚨 ¡Salvaste a tu amigo de un peligro real!<br>" +
+            "Esas son señales claras de <b>grooming</b> (acoso de adultos a menores):<br>" +
+            "• Pedir fotos o datos personales<br>" +
+            "• Pedir secreto ('no le cuentes a nadie')<br>" +
+            "• Querer encontrarse en persona<br>" +
+            "<b>SIEMPRE debe intervenir un adulto de confianza.</b>";
+        resp.className = "correcto";
+        
+        // Completar misión
+        mision3Completada = true;
+        
+        // Mostrar mensaje final
+        document.getElementById("mensaje-final").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ Esto es muy serio. Tu amigo está en peligro y necesita ayuda de un adulto.";
+        resp.className = "incorrecto";
+    }
+}
+</script>
+
+</body>
+</html>

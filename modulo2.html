@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Misión 2 – El Peligro Invisible | Cyber Cuy</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Misión 1</a>
+    <a href="modulo2.html">Misión 2</a>
+    <a href="modulo3.html" id="btnM3" class="btn-disabled">Misión 3</a>
+</nav>
+
+<div class="container">
+
+    <h1>🕵️ Misión 2 – El Peligro Invisible</h1>
+
+    <!-- Historia -->
+    <div class="card">
+        <h2>📜 Historia</h2>
+        <p>
+            Mientras avanzas en el juego, los enemigos del ciberespacio empiezan a atacar.
+            Llegan correos que parecen reales, mensajes que dicen <b>"¡Ganaste un premio!"</b> 
+            y páginas que imitan a las verdaderas.
+        </p>
+        <p>
+            Cyber Cuy está contigo para enseñarte a reconocerlos:
+        </p>
+        <ul>
+            <li>Si alguien pide tus datos… <b>sospecha</b>.</li>
+            <li>Si un enlace se ve raro… <b>no lo abras</b>.</li>
+            <li>Si algo parece demasiado bueno para ser verdad… <b>seguramente es una trampa</b>.</li>
+            <li>Nunca descargues cosas sin estar seguro.</li>
+        </ul>
+        <p>
+            Pero también aprendes algo más importante: No debes reenviar mensajes falsos, 
+            ni burlarte de otros, ni compartir información que pueda dañar a alguien.
+        </p>
+        <p><b>Ser un buen guardián también significa usar Internet con respeto.</b></p>
+        <img src="img/cyber-cuy_corriendo.png" alt="Cyber-Cuy en acción">
+    </div>
+
+    <!-- Actividad 1: Detectar Phishing -->
+    <div class="card">
+        <h2>🎣 Actividad 1 – ¿Es un correo real o phishing?</h2>
+        <p>Recibes este correo electrónico. ¿Es confiable?</p>
+        
+        <div style="background:#f9f9f9; padding:15px; border-radius:8px; border:2px solid #ddd; margin:15px 0;">
+            <p style="margin:0; font-size:0.9rem; color:#666;"><b>De:</b> soporte@banc0-seguridad.com</p>
+            <p style="margin:5px 0; font-size:0.9rem; color:#666;"><b>Asunto:</b> ⚠️ URGENTE: Verifica tu cuenta</p>
+            <hr style="margin:10px 0; border:none; border-top:1px solid #ccc;">
+            <p style="margin:10px 0;">Estimado cliente,</p>
+            <p style="margin:10px 0;">
+                Detectamos actividad sospechosa en tu cuenta. 
+                <b style="color:red;">HAZ CLIC AQUÍ</b> en las próximas 24 horas 
+                para verificar tu identidad o tu cuenta será bloqueada.
+            </p>
+            <a href="#" style="background:red; color:white; padding:8px 15px; text-decoration:none; border-radius:5px; display:inline-block; margin:10px 0;">
+                VERIFICAR AHORA
+            </a>
+            <p style="margin:10px 0; font-size:0.85rem; color:#888;">
+                Atentamente, Equipo de Seguridad
+            </p>
+        </div>
+
+        <p><b>¿Qué debes hacer?</b></p>
+        <button onclick="actividad1('confiar')">✅ Hacer clic para verificar</button>
+        <button onclick="actividad1('desconfiar')">❌ No hacer clic, es sospechoso</button>
+        
+        <p id="resp1" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 2: Premio Falso -->
+    <div class="card" id="act2" style="display:none;">
+        <h2>🎁 Actividad 2 – Mensaje Sospechoso</h2>
+        <p>Tu amigo te envía este mensaje por WhatsApp:</p>
+        
+        <div style="background:#dcf8c6; padding:15px; border-radius:8px; border:2px solid #25d366; margin:15px 0;">
+            <p style="margin:0; font-size:0.9rem; color:#555;">👤 Amigo desconocido - 10:23 AM</p>
+            <p style="margin:10px 0; font-weight:bold;">
+                🎉🎉 ¡FELICIDADES! Fuiste seleccionado para ganar un iPhone 15 GRATIS! 
+                Solo debes hacer clic en este enlace y llenar tus datos personales:
+            </p>
+            <p style="margin:10px 0; color:blue; text-decoration:underline;">
+                www.iphone-gratis-ganador.com/premio
+            </p>
+            <p style="margin:10px 0;">
+                ¡Apúrate, solo quedan 5 premios! 🏃‍♂️💨
+            </p>
+        </div>
+
+        <p><b>¿Qué haces?</b></p>
+        <button onclick="actividad2('hacer-clic')">📱 Hacer clic, ¡quiero el iPhone!</button>
+        <button onclick="actividad2('ignorar')">🚫 Ignorarlo, es una trampa</button>
+        
+        <p id="resp2" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 3: Enlace Sospechoso -->
+    <div class="card" id="act3" style="display:none;">
+        <h2>🔗 Actividad 3 – ¿Enlace Seguro?</h2>
+        <p>Quieres entrar a tu banco en línea. ¿Cuál de estos enlaces es el correcto?</p>
+        
+        <div style="background:#f0f0f0; padding:15px; border-radius:8px; margin:15px 0;">
+            <p style="margin:5px 0;">A) <span style="color:blue;">www.bancosegur0.com</span> (con cero en lugar de 'o')</p>
+            <p style="margin:5px 0;">B) <span style="color:blue;">www.bancoseguro.com</span></p>
+            <p style="margin:5px 0;">C) <span style="color:blue;">www.banco-seguro-login.com</span></p>
+        </div>
+
+        <button onclick="actividad3('a')">A) bancosegur0.com</button>
+        <button onclick="actividad3('b')">B) bancoseguro.com</button>
+        <button onclick="actividad3('c')">C) banco-seguro-login.com</button>
+        
+        <p id="resp3" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Actividad 4: Responsabilidad Digital -->
+    <div class="card" id="act4" style="display:none;">
+        <h2>💬 Actividad 4 – Ser Responsable</h2>
+        <p>Recibes una noticia impactante que dice: 
+        <i>"¡ALERTA! El agua del grifo causa enfermedades graves, compártelo con todos!"</i></p>
+        <p>No estás seguro si es verdad. ¿Qué haces?</p>
+
+        <button onclick="actividad4('compartir')">📤 Compartirlo inmediatamente</button>
+        <button onclick="actividad4('verificar')">🔍 Verificar antes de compartir</button>
+        
+        <p id="resp4" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+
+    <!-- Mensaje Final -->
+    <div class="card" id="mensaje-final" style="display:none;">
+        <div class="unlock-message">
+            <h2 style="margin-top:0;">🎉 ¡Misión 2 Completada!</h2>
+            <p>¡Excelente trabajo! Ahora sabes:</p>
+            <ul style="text-align:left; display:inline-block;">
+                <li>✅ Detectar correos de phishing</li>
+                <li>✅ Identificar premios falsos</li>
+                <li>✅ Reconocer enlaces sospechosos</li>
+                <li>✅ Verificar antes de compartir</li>
+            </ul>
+            <p><b>Los hackers empiezan a darse cuenta de tu progreso… 
+            y se preparan para una emboscada más grande.</b></p>
+            <img src="img/cyber-cuy_volando.png" alt="Cyber-Cuy victorioso" style="width:200px; margin:20px auto;">
+            <br>
+            <a href="modulo3.html" class="boton" style="margin-top:10px;">➡ Continuar a Misión 3</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Variable para controlar progreso
+let mision2Completada = false;
+
+// ACTIVIDAD 1: Phishing
+function actividad1(respuesta) {
+    let resp = document.getElementById("resp1");
+    
+    if (respuesta === 'desconfiar') {
+        resp.innerHTML = "🛡️ ¡Correcto! Este correo tiene señales de phishing:<br>" +
+            "• Dominio sospechoso (banc<b>0</b> con cero)<br>" +
+            "• Crea urgencia falsa<br>" +
+            "• Pide hacer clic inmediatamente<br>" +
+            "• Los bancos NUNCA piden datos por correo";
+        resp.className = "correcto";
+        document.getElementById("act2").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Cuidado! Es phishing. Nunca hagas clic en enlaces sospechosos.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 2: Premio Falso
+function actividad2(respuesta) {
+    let resp = document.getElementById("resp2");
+    
+    if (respuesta === 'ignorar') {
+        resp.innerHTML = "👏 ¡Excelente decisión! Las señales de trampa son:<br>" +
+            "• Nadie regala iPhones así<br>" +
+            "• Pide datos personales<br>" +
+            "• Crea presión con 'quedan pocos'<br>" +
+            "• Si parece demasiado bueno... es mentira";
+        resp.className = "correcto";
+        document.getElementById("act3").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Es una trampa! Nunca des tus datos por premios que parecen falsos.";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 3: Enlace Seguro
+function actividad3(respuesta) {
+    let resp = document.getElementById("resp3");
+    
+    if (respuesta === 'b') {
+        resp.innerHTML = "✅ ¡Perfecto! 'bancoseguro.com' es el correcto.<br>" +
+            "• La opción A usa un <b>cero (0)</b> en lugar de 'o'<br>" +
+            "• La opción C tiene palabras extras sospechosas<br>" +
+            "• Siempre revisa bien la URL antes de entrar";
+        resp.className = "correcto";
+        document.getElementById("act4").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ Incorrecto. Revisa bien: ¿tiene letras raras o palabras extras?";
+        resp.className = "incorrecto";
+    }
+}
+
+// ACTIVIDAD 4: Responsabilidad Digital
+function actividad4(respuesta) {
+    let resp = document.getElementById("resp4");
+    let btnM3 = document.getElementById("btnM3");
+    
+    if (respuesta === 'verificar') {
+        resp.innerHTML = "🌟 ¡Eres un guardián responsable!<br>" +
+            "Verificar antes de compartir evita:<br>" +
+            "• Propagar noticias falsas<br>" +
+            "• Crear pánico innecesario<br>" +
+            "• Dañar la reputación de otros<br>" +
+            "• Ser parte del problema";
+        resp.className = "correcto";
+        
+        // Habilitar Misión 3
+        mision2Completada = true;
+        btnM3.classList.remove('btn-disabled');
+        btnM3.style.pointerEvents = "auto";
+        btnM3.style.opacity = "1";
+        btnM3.href = "modulo3.html";
+        
+        // Mostrar mensaje final
+        document.getElementById("mensaje-final").style.display = "block";
+    } else {
+        resp.innerHTML = "❌ ¡Espera! Compartir sin verificar puede propagar mentiras y hacer daño.";
+        resp.className = "incorrecto";
+    }
+}
+</script>
+
+</body>
+</html>
